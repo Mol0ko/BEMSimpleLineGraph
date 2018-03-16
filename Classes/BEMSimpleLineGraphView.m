@@ -791,7 +791,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
             else [overlapLabels addObject:label]; // Overlapped
         }
         
-        BOOL fullyContainsLabel = CGRectContainsRect(self.bounds, label.frame);
+        BOOL fullyContainsLabel = CGRectIntersectsRect(self.bounds, label.frame);
         if (!fullyContainsLabel) {
             [overlapLabels addObject:label];
         }
